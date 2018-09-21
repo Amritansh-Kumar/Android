@@ -37,13 +37,13 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void checkForPermission() {
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.SEND_SMS) + ContextCompat
-                .checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.SEND_SMS)
+            + ContextCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE)
+            != PackageManager
                     .PERMISSION_GRANTED) {
             if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission
                     .SEND_SMS) || ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.CALL_PHONE)) {
-                Toast.makeText(this, "grant permissions to enable messaging and calling " +
-                                     "features", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "grant permissions to enable messaging and calling features", Toast.LENGTH_SHORT).show();
             } else {
                 ActivityCompat.requestPermissions(this,
                         new String[]{Manifest.permission.SEND_SMS, Manifest.permission.CALL_PHONE},

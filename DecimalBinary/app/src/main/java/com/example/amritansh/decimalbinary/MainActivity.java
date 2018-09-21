@@ -104,6 +104,10 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }else {
             Toast.makeText(this,"enter a number", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,
+                    "this a toast message",
+                    Toast.LENGTH_SHORT)
+                 .show();
             return false;
         }
     }
